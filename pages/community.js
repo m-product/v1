@@ -18,7 +18,7 @@ export default function CommunityPage() {
           name="og:description"
           content="A home for student-led entrepreneurship on the University of Michigan campus"
         />
-        <meta property="og:image" content="/share.png" />
+        <meta property="og:image" content="/community.png" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head> 
 			<div className="h-screen bg-gradient-to-r from-gray-900 to-black py-24">
@@ -31,7 +31,7 @@ export default function CommunityPage() {
 							COMMUNITY 
 						</h2>
 						<p className="text-2xl mt-8 text-blue-100 font-light leading-tight tracking-tight px-5">
-							A home for student-led entrepreneurship at the University of Michigan
+							The home for student-led entrepreneurship at the University of Michigan.
 						</p>
 					</div>
 					<div className="w-full mt-10">

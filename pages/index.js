@@ -1,7 +1,8 @@
 import Head from "next/head";
-
-import Form from "../components/Form";
-import { What, Special, Expect } from "../components/landing";
+import { What, Offer, Join, Leadership, Advisors } from "../components/about";
+import NavbarBuilder from "../components/navbar.js"
+import { ProductStudioBanner } from "../components/banner";
+import { Calendar } from '../components/calendarapi'
 
 export default function IndexPage() {
   return (
@@ -24,40 +25,65 @@ export default function IndexPage() {
         <meta property="og:image" content="/share.png" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="h-screen flex justify-center items-center bg-gradient-to-r from-gray-900 to-black">
-        <div className="max-w-md text-center text-white">
-          <h1 className="text-6xl tracking-tight font-bold font-logo text-blue-100 leading-none">
-            V1
-          </h1>
-          <h2 className="text-2xl tracking-tight font-normal italic m-0 p-0 text-gradient bg-gradient-to-r from-yellow-200 to-yellow-500">
-            at Michigan
-          </h2>
-          <p className="text-2xl mt-8 text-blue-100 font-light leading-tight tracking-tight px-5">
-            Because the next generation of technology products won&apos;t be
-            built in a classroom.
-          </p>
-          <a href="#form">
-            <button
-              type="button"
-              className="bg-gradient-to-r from-yellow-200 to-yellow-500 hover:bg-blue-500 text-gray-800 font-semibold py-2 px-4 rounded shadow mt-12 hover:opacity-75"
-            >
-              Request an invite
-            </button>
-          </a>
+      
+      {/* <ProductStudioBanner /> */}
+      <NavbarBuilder />
+      <div className="h-screen flex justify-center items-center bg-gradient-to-r from-gray-200 to-white">
+        <div className="max-w-screen-xl">
+          { /* <Link href="https://studio.v1michigan.com" target="_blank">
+            <div className="block lg:text-center mb-8">
+              <div
+                className="p-2 bg-gradient-to-r from-yellow-200 to-yellow-500 items-center text-gray-800 hover:opacity-75 leading-none rounded-full flex inline-flex mb-2 cursor-pointer"
+                role="alert"
+              >
+                <span className="flex rounded-full bg-yellow-500 uppercase px-2 py-1 text-xs font-bold mr-2 ml-2">
+                  New
+                </span>
+                <span className="font-semibold mr-1 text-left flex-auto text-sm">
+                  Product Studio
+                </span>
+                <svg
+                  className="fill-current opacity-75 h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
+                </svg>
+              </div>
+            </div>
+  </Link> */}
+          <div className="md:flex">
+            <div className="flex-1 p-8 flex items-center">
+              <div className="">
+                <h1 className="text-6xl tracking-tight font-bold font-logo text-gray-900 leading-none">
+                  V1
+                </h1>
+                <h2 className="text-2xl tracking-tight font-bold italic text-gradient bg-gradient-to-r from-yellow-600 to-yellow-700">
+                  at Michigan
+                </h2>
+                <p className="text-2xl mt-8 text-gray-900 font-bold tracking-tight mb-3">
+                  The community for ambitious student builders at the University
+                  of Michigan.
+                </p>
+              </div>
+            </div>
+            <div className="max-w-xl p-4">
+              <img className="tilt shadow-md rounded-sm" src="/gif.gif"></img>
+            </div>
+          </div>
         </div>
       </div>
 
       <What />
-
-      <Special />
-
-      <Expect />
-
-      <div
-        id="form"
-        className="min-h-screen flex justify-center items-center bg-gradient-to-r from-gray-900 to-black"
-      >
-        <Form />
+      <Offer />
+      <Calendar />
+      <Join />
+      {/* <Leadership />
+      <Advisors /> */}
+      <div className="bg-gradient-to-r from-gray-900 to-black">
+        <p className="footer text-gray-200 text-center py-8">
+          &copy; 2021 V1 | team@v1michigan.com
+        </p>
       </div>
     </main>
   );
